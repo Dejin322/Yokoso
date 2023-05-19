@@ -1,0 +1,118 @@
+.body{
+position: absolute;
+width: 390px;
+height: 600px;
+left: calc(50% - 390px/2);
+top: calc(50% - 600px/2);
+
+background: #8BADA3;
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
+.Welcome{
+position: absolute;
+width: 300px;
+height: 42px;
+left: 45px;
+top: 56.5px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 36px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+color: #333333;
+
+}
+.change_username{
+    position: absolute;
+height: 540px;
+left: 55px;
+right: 55px;
+top: 77px;
+}
+.img{
+    position: absolute;
+width: 150px;
+height: 150px;
+left: calc(50% - 150px/2);
+top: calc(25% - 150px/2)
+}
+.login{
+box-sizing: border-box;
+
+position: absolute;
+height: 47px;
+left: 0px;
+right: 0px;
+top: 200px;
+background-color: #8BADA3;
+border-top: #8BADA3;
+border-left: #8BADA3;
+border-right: #8BADA3;
+border-bottom: 2px solid #FFFFFF;
+}
+
+.button {
+    width: 280px;
+    height: 50px;
+    left: calc(50% - 280px/2);
+    top: 351px;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  .btn {
+    background: #8BADA3;
+    background: #FFFFFF;
+    border: none;
+  }
+  .btn:hover {
+     background:#8BADA3;
+  }
+  .txt{
+    position: absolute;
+    top: 480px;
+    left: 40px;
+    
+font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 20px;
+
+
+display: flex;
+align-items: center;
+text-align: center;
+  }
+.URL{
+position: absolute;
+top: 480px;
+left: 130px;
+    
+    font-family: 'Poppins', sans-serif; 
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 20px;
+/* or 150% */
+}  

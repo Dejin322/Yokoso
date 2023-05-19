@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YOUKOSO</title>
+	<meta charset="utf-8">
+	<link href="http://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="base.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+</head>
+<body>
+	
+	<div class="leftContainer">
+		<div id="userList"></div>
+		<div class="form">
+			
+			<p id="chat">Чат</p>
+			<div class = "cont">
+				<div class = "circles" id = "no1"> </div>
+			</div>
+		</div>
+		<img class="logo" src="logo.svg">
+	</div>
+	
+	<div class="base">
+		<div class="message">
+    <h1></h1>
+	<section id="input_zone"> 
+		<input id="message" class="vertical-align" type="text" />
+		<button id="send_message" class="vertical-align" type="button">Отправить</button>
+	  </section>
+</div>
+<section id="chatroom">
+	<section id="feedback"></section>
+  </section>
+
+</body>
+
+</html>

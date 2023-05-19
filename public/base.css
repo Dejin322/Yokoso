@@ -1,0 +1,262 @@
+.leftContainer{
+    position: absolute;
+    width: 313px;
+    height: 625px;
+    background-color: #8BADA3;
+    top: -0px;
+    left: 0px;
+}
+.logo{
+    position: absolute;
+height: 150px;
+width: 165px;
+left: 80px;
+top: 0px;
+
+}
+#chat{
+position: absolute;
+top: 118px;
+left: 5px;
+
+font-family: 'Lato',sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 14px;
+text-transform: uppercase;
+
+color: #ffffff;
+}
+.cont{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    
+    
+    
+    }
+    
+.circles{
+    
+    height: 45px;
+    width: 45px;
+    background: url("шестерёнка.png");
+    background-size: cover;
+    position: absolute;
+    left: 7px;
+    top: 22px;
+    overflow:hidden;
+    
+    }
+    
+    
+    #no1{
+    left: 0px;
+    top: 5px;
+    }
+    
+#no1:hover{
+    animation-name: crcA1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}  
+    @keyframes crcA1 {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+    }
+    
+    @keyframes crcA2 {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(-360deg);}
+    }
+.base{
+position: absolute;
+height: 625px;
+width: 1053px;
+left: 313px;
+top: 0px;
+background: rgb(255, 255, 255);
+
+}    
+ .avatar{
+position: absolute;
+height: 45px;
+width: 55px;
+left: 22px;
+top: 10px;
+border-radius: 5px;
+background-color: rgb(73, 90, 105);
+
+ }
+ #nm{
+    position: absolute;
+    left: 60px;
+top: 4px;
+ }
+ .message{
+    position: absolute;
+    top: 567px;
+   
+ }
+
+ section#chatroom {
+    border: 3px inset lightblue;
+    height: 91%;
+    overflow: auto;
+}
+
+section#input_zone {
+    height: 50px;
+    width: 1053px;
+    text-align: center;
+    background-color: #8BADA3;
+}
+
+input#message {
+    display: inline-block;
+    width: 89%;
+    height: 80%;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 2vh;
+}
+
+button#send_message {
+    display: inline-block;
+    height: 80%;
+    width: 10%;
+}
+
+.alert{
+    padding: 10px;
+    margin: 12px;
+    width:auto;
+  }
+  
+  p.message {
+      margin: 0px;
+      width: 100%;
+      height: 40px;
+      font-size: 2vh;
+      font-family: 'Comfortaa', sans-serif;
+      padding: 1vh;
+  }
+  
+  .message:nth-child(even) {
+      background-color: #8BADA3;
+  }
+  
+  .message:nth-child(odd) {
+      background-color: #8BADA3;
+  }
+  input#username {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.Private{
+    position: absolute;
+    top: 100px;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .body{
+    position: absolute;
+    width: 390px;
+    height: 600px;
+    left: calc(50% - 390px/2);
+    top: calc(50% - 600px/2);
+    
+    background: #8BADA3;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    }
+    .Welcome{
+    position: absolute;
+    width: 300px;
+    height: 42px;
+    left: 45px;
+    top: 56.5px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    color: #333333;
+    
+    }
+    .change_username{
+        position: absolute;
+    height: 540px;
+    left: 55px;
+    right: 55px;
+    top: 77px;
+    }
+    .img{
+        position: absolute;
+    width: 150px;
+    height: 150px;
+    left: calc(50% - 150px/2);
+    top: calc(25% - 150px/2)
+    }
+    .login{
+    box-sizing: border-box;
+    
+    position: absolute;
+    height: 47px;
+    left: 0px;
+    right: 0px;
+    top: 200px;
+    background-color: #8BADA3;
+    border-top: #8BADA3;
+    border-left: #8BADA3;
+    border-right: #8BADA3;
+    border-bottom: 2px solid #FFFFFF;
+    }
+    
+    .button {
+        width: 280px;
+        height: 50px;
+        left: calc(50% - 280px/2);
+        top: 351px;
+        color: #fff;
+        border-radius: 25px;
+        padding: 10px 25px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        color: black;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+         box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+         7px 7px 20px 0px rgba(0,0,0,.1),
+         4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+      }
+      .btn {
+        background: #8BADA3;
+        background: #FFFFFF;
+        border: none;
+      }
+      .btn:hover {
+         background:#8BADA3;
+      }
