@@ -18,35 +18,39 @@ server = app.listen("3000", () => console.log("Server is running..."));
 
 const io = require("socket.io")(server);
 
-
-// Добавляем массив подключенных пользователей
+const users = [];
 
 io.on('connection', (socket) => {
-console.log('New user connected');
+  const userId = socket.id;
 
-socket.username = `Anonymous`;
+  const user = { id: userId };
+  users.push(user);
 
-// Сохраняем данные пользователя в массив, при подключении к серверу
-socket.on('addUser', (data) => {
-    var users = [];
-socket.username = data.username;
-users.push({ id: socket.id, username: data.username });
-io.emit('update_userlist', users)
-console.log(users)
+  socket.emit('userList', users, userId);
+
+  socket.on('disconnect', () => {
+    const userIndex = users.findIndex((user) => user.id === userId);
+    if (userIndex !== -1) {
+      users.splice(userIndex, 1);
+      io.emit('userList', users);
+    }
+  });
+
+  socket.on('message', (userId, message) => {
+    if (!userId) {
+      userId = '';
+    }
+    if (!message) {
+      message = '';
+    }
+    const user = users.find((user) => user.id === userId);
+    if (user) {
+      io.to(user.id).emit('message', message);
+    } else {
+      io.emit('message', message);
+    }
+  });
 });
 
-// Ищем получателя по username в массиве подключенных пользователей и отправляем ему сообщение
-socket.on('private_message', (data) => {
-const recipient = users.find((user) => user.username === data.recipient);
-io.to(recipient.id).emit('private_message', { message: data.message, sender: socket.username });
-});
 
 
-    socket.on('new_message', (data) => {
-        io.sockets.emit('add_mess', {message : data.message, username : socket.username, className:data.className});
-    })
-
-    socket.on('typing', (data) => {
-    	socket.broadcast.emit('typing', {username : socket.username})
-    })
-})
